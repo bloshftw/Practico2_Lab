@@ -1,4 +1,6 @@
 Participantes:
--Luciano Jesus Rodriguez
+-Rogriguez Luciano      DNI:
 -Villegas Maria Lourdes DNI:46332709
--Martin Perez
+-Perez Martin           DNI:  
+-Grabobi Fernando       DNI:43222114
+-Miselli Milena         DNI:

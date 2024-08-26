@@ -3,12 +3,14 @@ package com.mycompany.practico_2_lab;
 public class Reloj {
     private String dia, hora, modelo;
     private long numSerie;
+    private int frecuencia;
 
-    public Reloj(String dia, String hora, String modelo, long numSerie) {
+    public Reloj(String dia, String hora, String modelo, long numSerie, int frecuencia) {
         this.dia = dia;
         this.hora = hora;
         this.modelo = modelo;
         this.numSerie = numSerie;
+        this.frecuencia = frecuencia;
     }
 
     public String getDia() {
@@ -17,6 +19,14 @@ public class Reloj {
 
     public String getHora() {
         return hora;
+    }
+
+    public int getFrecuencia() {
+        return frecuencia;
+    }
+
+    public void setFrecuencia(int frecuencia) {
+        this.frecuencia = frecuencia;
     }
 
     public void incrementarDia() {

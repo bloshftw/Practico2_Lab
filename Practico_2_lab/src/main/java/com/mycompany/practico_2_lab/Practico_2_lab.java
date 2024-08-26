@@ -14,6 +14,22 @@ public class Practico_2_lab {
         System.out.println("Hello World!");
         
         System.out.println("hola");
+          Reloj relojNormal = new Reloj(12, 30, 45);
+
+        Persona unaPersona = new Persona("Juan", relojNormal);
+
+        System.out.println("La hora del reloj de "+ unaPersona.getNombre()+ " es: "+ unaPersona.getReloj());
+
+        RelojFit relojFit = new RelojFit(14, 45, 30);
+
+        unaPersona.setReloj(relojFit);
+
+
+        relojFit.cuentaPasos(3, 4);
+        System.out.println("Pasos contados: "+ relojFit.getPasos());
+
+        relojFit.frecuenciaAleatoria();
+    }
     }
     
 

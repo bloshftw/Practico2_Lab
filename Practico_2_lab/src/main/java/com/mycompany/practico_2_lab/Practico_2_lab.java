@@ -11,9 +11,7 @@ package com.mycompany.practico_2_lab;
 public class Practico_2_lab {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         
-        System.out.println("hola");
           Reloj relojNormal = new Reloj(12, 30, 45);
 
         Persona unaPersona = new Persona("Juan", relojNormal);

@@ -1,30 +1,73 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.practico_2_lab;
+public class Reloj{
+    private String dia, hora, modelo;
+    private long numSerie;
 
-/**
- *
- * @author Lucia
- */
-public class relojFit extends Reloj {
-        private int pasos;
-
-    public RelojFit(int frecuencia) {//crear en clase "Reloj" int frecuencia
-        super(frecuencia);
-        this.pasos = 0;
+    public Reloj(String dia, String hora, String modelo, long numSerie) {
+        this.dia = dia;
+        this.hora = hora;
+        this.modelo = modelo;
+        this.numSerie = numSerie;
     }
 
-    public void cuentaPasos(int x, int y) {
-        this.pasos += Math.abs(x) + Math.abs(y);
-        System.out.println("Pasos contados: " + this.pasos);
+    // Métodos get
+    public String getDia() {
+        return dia;
     }
 
-    public void frecuenciaAleatoria() {
-        int nuevaFrecuencia = (int)(Math.random() * 100); // Frecuencia aleatoria entre 0 y 100
-        setFrecuencia(nuevaFrecuencia);//crear en "Reloj" un "setFrecuencia"
-        System.out.println("Frecuencia aleatoria establecida: " + nuevaFrecuencia + " Hz");
+    public String getHora() {
+        return hora;
     }
-    
+
+
+    public void incrementarDia() {
+        switch(dia.toLowerCase()) {
+            case "lunes":
+                dia = "martes";
+                break;
+            case "martes":
+                dia = "miércoles";
+                break;
+            case "miércoles":
+                dia = "jueves";
+                break;
+            case "jueves":
+                dia = "viernes";
+                break;
+            case "viernes":
+                dia = "sábado";
+                break;
+            case "sábado":
+                dia = "domingo";
+                break;
+            case "domingo":
+                dia = "lunes";
+                break;
+            default:
+                dia = "lunes"; 
+                break;
+        }
+    }
+
+
+    public void incrementarHora() {
+        String[] partes = hora.split(":");
+        int horas = Integer.parseInt(partes[0]);
+        int minutos = Integer.parseInt(partes[1]);
+
+        horas += 1;
+        if (horas == 24) {
+            horas = 0;
+            incrementarDia(); 
+        }
+
+        hora = String.format("%02d:%02d", horas, minutos);
+    }
+
+
+    public void limpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }

@@ -1,16 +1,35 @@
 
 package com.mycompany.practico_2_lab;
 public class Reloj {
-    private String dia, hora, modelo;
-    private long numSerie;
-    private int frecuencia;
+ 
+ private String dia;
+ private String hora;
+ private String modelo;
+ private Long numSerie;
+ private Double frecuencia;
 
-    public Reloj(String dia, String hora, String modelo, long numSerie, int frecuencia) {
+    public Reloj(String dia, String hora, String modelo, Long numSerie, Double frecuencia) {
         this.dia = dia;
         this.hora = hora;
         this.modelo = modelo;
         this.numSerie = numSerie;
         this.frecuencia = frecuencia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setNumSerie(Long numSerie) {
+        this.numSerie = numSerie;
     }
 
     public String getDia() {
@@ -21,13 +40,26 @@ public class Reloj {
         return hora;
     }
 
-    public int getFrecuencia() {
+    public String getModelo() {
+        return modelo;
+    }
+
+    public Long getNumSerie() {
+        return numSerie;
+    }
+
+    public Double getFrecuencia() {
         return frecuencia;
     }
 
-    public void setFrecuencia(int frecuencia) {
+    public void setFrecuencia(Double frecuencia) {
         this.frecuencia = frecuencia;
     }
+ 
+   
+
+ 
+   /*METODOS*/
 
     public void incrementarDia() {
         switch(dia.toLowerCase()) {
@@ -57,7 +89,8 @@ public class Reloj {
                 break;
         }
     }
-
+    
+    
     public void incrementarHora() {
         String[] partes = hora.split(":");
         int horas = Integer.parseInt(partes[0]);
@@ -76,4 +109,20 @@ public class Reloj {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
+    
+    
+    public void frecuenciaAleatoria(){
+   
+    }
+    
+    public void cuentaPasos (int x, int y){
+    
+    }
+    
+    
 }
+    
+    
+
+
+

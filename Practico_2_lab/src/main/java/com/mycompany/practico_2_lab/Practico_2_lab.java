@@ -1,33 +1,48 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.practico_2_lab;
 
-/**
- *
- * @author Lucia
- */
 public class Practico_2_lab {
 
+    /*INTEGRANDES: */
+    /// Luciano Jesus Rodriguez DNI: 43123899
+    /// Fernando Grabobi DNI: 43222114
+    /// Milena Miselli DNI: 44164036
+    /// Martin Perez DNI: 44020159
+    /// Villegas Maria Lourdes DNI:46332709
+    
+    
     public static void main(String[] args) {
         
-          Reloj relojNormal = new Reloj(12, 30, 45);
+        relojFit casio = new relojFit("Lunes","17:12","Rolex",0241L,50.0);
+        
+        
+        
+       Persona Milena = new Persona("Milena",casio,"Miselli",22,170);
+       
+       Milena.mostrarDatos();
+       
+       /*FUNCION MOSTRAR DIA E INCREMENTAR*/
+      System.out.println(Milena.getReloj().getDia());
+      Milena.getReloj().incrementarDia();
+       System.out.println(Milena.getReloj().getDia());
+       
+       /*FUNCION MOSTRAR HORA E INCREMENTAR*/
+        System.out.println(Milena.getReloj().getHora());
+        Milena.getReloj().incrementarHora();
+        System.out.println(Milena.getReloj().getHora());
 
-        Persona unaPersona = new Persona("Juan", relojNormal);
-
-        System.out.println("La hora del reloj de "+ unaPersona.getNombre()+ " es: "+ unaPersona.getReloj());
-
-        RelojFit relojFit = new RelojFit(14, 45, 30);
-
-        unaPersona.setReloj(relojFit);
-
-
-        relojFit.cuentaPasos(3, 4);
-        System.out.println("Pasos contados: "+ relojFit.getPasos());
-
-        relojFit.frecuenciaAleatoria();
-    }
+       /*MODELO Y FRECUENCIA*/
+        System.out.println("Modelo del reloj: " + Milena.getReloj().getModelo());
+        System.out.println("Frecuencia actual: " + Milena.getReloj().getFrecuencia());
+        
+       /*FRECUENCIA ALEATORIA*/
+       
+        
+       
+       /*CUENTA PASOS*/
+       
+       Milena.getReloj().frecuenciaAleatoria();
+       Milena.getReloj().cuentaPasos(5, 5);
     }
     
 
